@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <title>User Login and Sessions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark" style="background-color:#565656">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="font-size:30px">Authentication Practice</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="main">
+        <div ng-controller="myController">
+            <h2 id="welcomeText">Welcome. You are Logged In as
+                <%= username %>
+            </h2>
+            <a id="logoutLink" href="/logout">Logout</a> |
+            <a id="editLink" href="/user">Edit User</a>
+
+        </div>
+        <hr>
+        <span id="indexMsg">
+        <%= msg %>
+    </span>
+        <hr>
+        <span id="colorText">
+    Color
+        <%= color %>
+      </span>
+        <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+        <script src="/javascripts/my_app.js"></script>
+    </div>
+</body>
+
+</html>
